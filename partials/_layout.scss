@@ -12,6 +12,9 @@ Layout style
 
 // Footer
 
-#colophon { position: fixed; bottom: 0; z-index: 999; width: 100%; text-align: center; background: transparent; 
+#colophon { display: none; 
+/*
+position: fixed; bottom: 0; z-index: 999; width: 100%; text-align: center; background: transparent; 
   .copyright { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
+*/
 }
