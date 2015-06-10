@@ -335,8 +335,11 @@ Main Components
 		font-family: $secondary-font;
 		width: 90%;
 		max-width: 800px;
-		margin: 0 auto;
+		margin: 0 auto $baseline;
 		line-height: 2;
+		&:last-of-type { 
+  		margin-bottom: 0; 
+		}
 	}
 
 	@include MQ(M) {
