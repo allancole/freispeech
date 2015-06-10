@@ -1,19 +1,17 @@
-// breakpoints
-   
-$S:     480px;   
-$M:     1024px;     
-$L:     1170px;     
+/* -------------------------------- 
 
-// media queries
+Layout style
 
-@mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
-  }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
-  }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
-  }
+-------------------------------- */
+
+// Header
+
+#masthead { position: fixed; top: 0; z-index: 999; height: 0; width: 100%; text-align: center; background: transparent; 
+  .site-branding { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
+}
+
+// Footer
+
+#colophon { position: fixed; bottom: 0; z-index: 999; width: 100%; text-align: center; background: transparent; 
+  .copyright { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
 }
