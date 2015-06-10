@@ -278,7 +278,7 @@ Main Components
 	p {
 		font-size: 1.4rem;
 		font-family: $secondary-font;
-		font-style: italic;
+	//font-style: italic;
 		line-height: 1.2;
 		padding: .4em 2em;
 		display: none;
@@ -332,6 +332,7 @@ Main Components
 	}
 
 	p {
+		font-family: $secondary-font;
 		width: 90%;
 		max-width: 800px;
 		margin: 0 auto;
