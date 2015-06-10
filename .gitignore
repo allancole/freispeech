@@ -1,2 +1,9 @@
+_site
+
 # Ignore Site Folder
-/_site
+_site/
+*~
+*.swp
+.DS_Store
+.sass-cache
+.codekit-config
