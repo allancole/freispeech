@@ -1,4 +1,11 @@
-// antialiasing mode font rendering
+/**
+ * Mixin Essentials 
+ * - src: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+ */
+
+/**
+ * antialiasing mode font rendering
+ */
 
 @mixin font-smoothing {
   -webkit-font-smoothing: antialiased;
@@ -6,7 +13,9 @@
 }
 
 
-// SVG background images with PNG and retina fallback
+/**
+ * SVG background images with PNG and retina fallback
+ */
 
 $image-path: '../img' !default;
 $fallback-extension: 'png' !default;
@@ -26,7 +35,9 @@ $retina-suffix: '@2x';
 }
 
 
-// Animations and keyframes
+/**
+ * Animations and keyframes
+ */
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes $animation-name {
@@ -54,7 +65,7 @@ $retina-suffix: '@2x';
   animation: #{$str};      
 }
 
-/* Animated */
+// Animate this 
 @mixin animate-this( $speed, $ease ) { 
 	-webkit-transform: translate3d(0, 0, 0);  
 	-webkit-transition: all $speed $ease;
@@ -63,3 +74,67 @@ $retina-suffix: '@2x';
 	-ms-transition: all $speed $ease;
 	transition: all $speed $ease;
 }
+// @include animate-this(.3s,ease-in-out);
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// @include transition(color .3s ease-in-out);
+
+
+/**
+ * Cross Browser Opacity 
+ */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+// .faded-text { @include opacity(0.8); }
+
+
+/**
+ * Clear Fix 
+ */
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// .container-with-floated-children { @extend %clearfix; }
+
+
+/**
+ * Visually hide an element
+ */
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+/*
+ * HTML 
+<button class="mobile-navigation-trigger">
+  <b class="visually-hidden">Open the navigation</b>
+  <img src="img/mobile-navigation-icon.svg">
+</button>
+
+ * CSS
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+*/
