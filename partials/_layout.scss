@@ -6,13 +6,43 @@ Layout style
 
 // Header
 
-#masthead { position: fixed; top: 0; z-index: 999; height: 0; width: 100%; text-align: center; background: transparent; 
-  .site-branding { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+#masthead { 
+  background: transparent; 
+  height: 0; 
+  position: fixed; 
+  text-align: center; 
+  top: ($baseline / 2); 
+  width: 100%; 
+  z-index: 999; 
+  .site-branding { 
+    @include animate-this(.333s, ease-in-out);
+    @include background-image('logo-freispeech'); 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    display: inline-block; 
+    margin: 0 auto; 
+    &:hover, 
+    &:active { 
+      opacity: .333; 
+    }
+  	a { 
+    	display: block; 
+    	height: ($baseline * 5); 
+    	padding: $baseline $gutter; 
+    	opacity: 0; 
+    }
+  }
 }
 
 // Footer
 
-#colophon { display: none; 
+#colophon { 
+  display: none; 
 /*
 position: fixed; bottom: 0; z-index: 999; width: 100%; text-align: center; background: transparent; 
   .copyright { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
