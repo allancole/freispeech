@@ -3,6 +3,7 @@
  * - src: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
  */
 
+
 /**
  * antialiasing mode font rendering
  */
@@ -11,6 +12,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* 
+ * Links 
+ */
+@mixin standardlink( $color: $color-2, $hovercolor: $color-3 ) { 
+  color: $color; 
+	&:link, 
+	&:visited { 
+  	@include animate-this(.3s,ease-in-out);
+  	color: $color; 
+  }
+	&:hover, 
+	&:active, 
+	&:focus { 
+  	@include animate-this(.3s,ease-in-out);
+  	color: $hovercolor; 
+  }
+}
+// @include standardlink($color-2,$color-3);
 
 
 /**

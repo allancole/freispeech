@@ -34,7 +34,7 @@ body {
 }
 
 a {
-	color: $color-2;
+  @include standardlink($color-2,$color-3);
 	text-decoration: none;
 }
 
@@ -282,7 +282,7 @@ Main Components
 		line-height: 1.2;
 		padding: .4em 2em;
 		display: none;
-		opacity: .6;
+	//opacity: .6;
 	}
 
 	@include MQ(M) {
@@ -323,7 +323,7 @@ Main Components
 	padding: 4em 0;
 	cursor: auto;
 	background-color: $color-1;
-	color: lighten($color-3, 30%);
+	color: lighten($color-3, 55%);
 	@include transition(opacity 0.4s 0s, visibility 0s 0.4s);
 
 	.is-full-width & {
