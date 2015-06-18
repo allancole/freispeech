@@ -35,6 +35,37 @@
 
 
 /**
+ * Text Shadow
+ */
+
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false) {
+  // A lot of people think the color comes first. It doesn't.
+  @if type-of($hoff) == color {
+    $temp-color: $hoff;
+    $hoff: $voff;
+    $voff: $blur;
+    $blur: $spread;
+    $spread: $color;
+    $color: $temp-color;
+  }
+  // Can't rely on default assignment with multiple supported argument orders.
+  $hoff: if($hoff, $hoff, $default-text-shadow-h-offset);
+  $voff: if($voff, $voff, $default-text-shadow-v-offset);
+  $blur: if($blur, $blur, $default-text-shadow-blur);
+  $spread: if($spread, $spread, $default-text-shadow-spread);
+  $color: if($color, $color, $default-text-shadow-color);
+  // We don't need experimental support for this property.
+  @if $color == none or $hoff == none {
+    @include text-shadow(none);
+  }
+  @else {
+    @include text-shadow(compact($hoff $voff $blur $spread $color));
+  }
+}
+// single-text-shadow($hoff, $voff, $blur, $spread, $color); 
+
+
+/**
  * SVG background images with PNG and retina fallback
  */
 
