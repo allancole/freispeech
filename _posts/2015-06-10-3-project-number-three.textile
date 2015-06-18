@@ -1,10 +1,10 @@
 --- 
 wordpress_id: 3
-title: The 3rd Project
+title: The 3rd Section
 wordpress_url: http://www.freispeech.com/project-number-two/
 layout: project
 category: events
-description: A description for the 3rd project.
+description: A description for the 3rd section.
 ---
 As always, I'm late to jump on the <strike>fail</strike>boat, and this time I've decided to do some serious maintenance on my computer. I've had enough of having to rely on System Restore and worrying that I've lost all of my data, or that my computer is on the brink of death. So, I'm going to start maintaining my system more, and that's  starting with keeping my hard drive as tidy and speedy as possible. <!--more-->
 

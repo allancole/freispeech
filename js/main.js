@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	//check if background-images have been loaded and show list items
 	$('.cd-single-project').bgLoaded({
 	  	afterLoaded : function(){
-	   		showCaption($('.projects-container li').eq(0));
+  	  	showCaption($('.projects-container li').eq(0));
 	  	}
 	});
 
@@ -56,7 +56,8 @@ jQuery(document).ready(function($){
 	function changeOpacity(){
 		var newOpacity = 1- ($('.projects-container').scrollTop())/300;
 		$('.projects-container .cd-scroll').css('opacity', newOpacity);
-		$('.is-full-width .cd-title, .site-branding').css('opacity', newOpacity);
+		$('.is-full-width .cd-title').css('opacity', newOpacity);
+		$('.site-branding').css('opacity', newOpacity);
 		//Bug fixed - Chrome background-attachment:fixed rendering issue
 		$('.is-full-width').hide().show(0);
 	}
