@@ -1,14 +1,14 @@
 @import 'bourbon'; // http://bourbon.io/
 
-@import '../partials/reset'; // colors, fonts etc...
+@import 'partials/reset'; // colors, fonts etc...
 
-@import '../partials/variables'; // colors, fonts etc...
+@import 'partials/variables'; // colors, fonts etc...
 
-@import '../partials/mixins'; // custom mixins
+@import 'partials/mixins'; // custom mixins
 
-@import '../partials/layout'; // responsive grid and media queries
+@import 'partials/layout'; // responsive grid and media queries
 
-@import '../partials/media-queries'; // responsive grid and media queries
+@import 'partials/media-queries'; // responsive grid and media queries
 
 /* -------------------------------- 
 
@@ -240,7 +240,7 @@ Main Components
     	}
 
     	.cd-single-project.is-loaded::after {
-			opacity: 0;
+			opacity: 1;
 		}
 
 	    .no-touch & .cd-single-project:hover::after, .cd-single-project.is-full-width.is-loaded::after {
@@ -270,7 +270,7 @@ Main Components
 	}
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		line-height: 1.5; 
 		font-weight: 700;
 	}
@@ -310,7 +310,7 @@ Main Components
 	@include MQ(L) {
 
 		h2 {
-			font-size: 3.6rem;
+			font-size: 2.5rem;
 		}
 	}
 }
