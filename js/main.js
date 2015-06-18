@@ -57,6 +57,7 @@ jQuery(document).ready(function($){
 		var newOpacity = 1- ($('.projects-container').scrollTop())/300;
 		$('.projects-container .cd-scroll').css('opacity', newOpacity);
 		$('.is-full-width .cd-title').css('opacity', newOpacity);
+		// add branding
 		$('.site-branding').css('opacity', newOpacity);
 		//Bug fixed - Chrome background-attachment:fixed rendering issue
 		$('.is-full-width').hide().show(0);
