@@ -14,12 +14,14 @@ jQuery(document).ready(function($){
 	});
 
 	//close project
-	$('.projects-container .cd-close').on('click', function(){
+	$('.projects-container .cd-close').on('click', function(e){
+  	e.preventDefault();
 		toggleProject($('.is-full-width'), $('.projects-container'), false);
 	});
 
 	//scroll to project info
-	$('.projects-container .cd-scroll').on('click', function(){
+	$('.projects-container .cd-scroll').on('click', function(e){
+  	e.preventDefault();
 		$('.projects-container').animate({'scrollTop':$(window).height()}, 500); 
 	});
 
