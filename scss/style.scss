@@ -10,7 +10,7 @@
 
 @import 'partials/media-queries'; // responsive grid and media queries
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -38,9 +38,9 @@ a {
 	text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 
@@ -81,7 +81,7 @@ Main Components
 	    	background-image: url('../img/img-1-small.jpg');
 			background-repeat: no-repeat;
 			background-position: center center;
-			background-size: cover; 
+			background-size: cover;
 			@include transition(opacity 0.5s, height 0.4s);
 	    }
 
@@ -93,9 +93,9 @@ Main Components
 
 		&:nth-of-type(2) {
 			top: 100vh/$items;
-			
+
 			&::after {
-				background-image: url('../img/img-2-small.jpg'); 
+				background-image: url('../img/img-2-small.jpg');
 			}
 
 			&::before {
@@ -107,7 +107,7 @@ Main Components
 			top: 100vh*2/$items;
 
 			&::after {
-				background-image: url('../img/img-3-small.jpg'); 
+				background-image: url('../img/img-3-small.jpg');
 			}
 
 			&::before {
@@ -115,12 +115,12 @@ Main Components
 			}
 		}
 
-		&:nth-of-type(4) { 
+		&:nth-of-type(4) {
 			top: 100vh*3/$items;
 
 			&::after {
-				background-image: url('../img/img-4-small.jpg'); 
-			} 
+				background-image: url('../img/img-4-small.jpg');
+			}
 
 			&::before {
 				content: 'img/img-4-small.jpg';
@@ -143,7 +143,7 @@ Main Components
 			&::after {
 				height: 100vh;
 			}
-		}	
+		}
 	}
 
 	@include MQ(M) {
@@ -165,7 +165,7 @@ Main Components
 			}
 
 			&:first-of-type::after {
-				background-image: url('../img/img-1-large.jpg'); 
+				background-image: url('../img/img-1-large.jpg');
 			}
 
 			&:nth-of-type(2) {
@@ -177,8 +177,8 @@ Main Components
 				}
 
 				&::after {
-					background-image: url('../img/img-2-large.jpg'); 
-				} 
+					background-image: url('../img/img-2-large.jpg');
+				}
 			}
 
 			&:nth-of-type(3) {
@@ -187,23 +187,23 @@ Main Components
 
 				&::before {
 					content: 'img/img-3-large.jpg';
-				} 
+				}
 
 				&::after {
-					background-image: url('../img/img-3-large.jpg'); 
+					background-image: url('../img/img-3-large.jpg');
 				}
 			}
 
-			&:nth-of-type(4) { 
+			&:nth-of-type(4) {
 				top: 0;
 				left: 100vw*3/$items;
 
 				&::before {
 					content: 'img/img-4-large.jpg';
-				} 
+				}
 
 				&::after {
-					background-image: url('../img/img-4-large.jpg'); 
+					background-image: url('../img/img-4-large.jpg');
 				}
 			}
 
@@ -218,7 +218,7 @@ Main Components
 				opacity: 1;
 
 				&::after {
-					opacity: 1;
+					opacity: .66;
 				}
 			}
 
@@ -240,10 +240,15 @@ Main Components
     	}
 
     	.cd-single-project.is-loaded::after {
-			opacity: 1;
-		}
+				opacity: 1;
+			}
 
-	    .no-touch & .cd-single-project:hover::after, .cd-single-project.is-full-width.is-loaded::after {
+	    .no-touch & .cd-single-project:hover::after{
+	    	opacity: 1;
+	    	@include transform(scale(1));
+	    }
+
+	    .cd-single-project.is-full-width.is-loaded::after {
 	    	opacity: 1;
 	    	@include transform(scale(1));
 	    }
@@ -271,7 +276,7 @@ Main Components
 
 	h2 {
 		font-size: 2rem;
-		line-height: 1.5; 
+		line-height: 1.5;
 		font-weight: 700;
 	}
 
@@ -318,7 +323,7 @@ Main Components
 .cd-project-info {
 	clear: both;
 	visibility: hidden;
-	opacity: 0;	
+	opacity: 0;
 	margin-top: 100vh;
 	padding: 4em 0;
 	cursor: auto;
@@ -337,8 +342,8 @@ Main Components
 		max-width: 800px;
 		margin: 0 auto $baseline;
 		line-height: 2;
-		&:last-of-type { 
-  		margin-bottom: 0; 
+		&:last-of-type {
+  		margin-bottom: 0;
 		}
 	}
 
@@ -348,7 +353,7 @@ Main Components
 	}
 }
 
-.projects-container .cd-close, 
+.projects-container .cd-close,
 .projects-container .cd-scroll {
 	display: block;
 	z-index: 1;
@@ -388,7 +393,7 @@ Main Components
 	}
 }
 
-.project-is-open .cd-close, 
+.project-is-open .cd-close,
 .project-is-open .cd-scroll {
 	visibility: visible;
 	@include transform(scale(1));
