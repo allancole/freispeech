@@ -235,12 +235,12 @@ Main Components
 
     	.cd-single-project::after {
     		background-attachment: fixed;
-			@include transform(scale(1.1));
-			@include transition(transform .8s, opacity .5s);
+				@include transform(scale(1.1));
+				@include transition(transform .8s, opacity .5s);
     	}
 
     	.cd-single-project.is-loaded::after {
-				opacity: .5;
+				opacity: .425;
 			}
 
 	    .no-touch & .cd-single-project:hover::after{
@@ -259,12 +259,12 @@ Main Components
 	position: absolute;
 	z-index: 1;
 	left: 0;
-    top: 100vh/($items*2);
-    @include transform(translateY(-50%));
-    width: 100%;
-    text-align: center;
+  top: 100vh/($items*2);
+  @include transform(translateY(-50%));
+  width: 100%;
+  text-align: center;
 
-    .is-full-width & {
+  .is-full-width & {
 		top: 50vh;
 		@include transition(opacity 0s, top 0.4s);
 	}
@@ -283,11 +283,9 @@ Main Components
 	p {
 		font-size: 1.4rem;
 		font-family: $secondary-font;
-	//font-style: italic;
 		line-height: 1.2;
 		padding: .4em 2em;
 		display: none;
-	//opacity: .6;
 	}
 
 	@include MQ(M) {
