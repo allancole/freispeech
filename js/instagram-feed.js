@@ -148,7 +148,7 @@
 
 //start
 var feed = new Instafeed({
-  get: 'freispeech',
+  get: 'user',
   userId: 15058122,
   resolution: "standard_resolution",
   accessToken: '15058122.de69efe.e8e1ef03db954a68afaa80b67841f3db',
