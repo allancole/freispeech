@@ -156,62 +156,6 @@ Layout style
     .copyright { padding: ($baseline / 2) $gutter; display: inline-block; margin: 0 auto; }
   */ }
 
-/**
- * Instagram Feed
- */
-body {
-  position: relative;
-  font-family: sans-serif;
-  text-align: center; }
-
-#wrapper {
-  max-width: 960px;
-  margin: 30px auto; }
-
-.photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-
-.photos a {
-  display: block;
-  float: left;
-  /*flex: 0 0 auto */
-  /*position: relative */ }
-
-.photos img {
-  display: block;
-  width: 100%; }
-
-@media (max-width: 1200px) {
-  .photos a {
-    width: calc(100%/4);
-    height: calc(100%/4); }
-
-  body {
-    background: red; } }
-@media (max-width: 992px) {
-  .photos a {
-    width: calc(100%/3);
-    height: calc(100%/3); }
-
-  body {
-    background: green; } }
-@media (max-width: 768px) {
-  .photos a {
-    width: calc(100%/2);
-    height: calc(100%/2); }
-
-  body {
-    background: blue; } }
-@media (max-width: 480px) {
-  .photos a {
-    width: 100%;
-    height: 100%; }
-
-  body {
-    background: yellow; } }
 /* --------------------------------
 
 Primary style
