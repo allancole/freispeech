@@ -6,7 +6,7 @@ layout: project
 category: social
 description: Needs a description for the social section.
 ---
-<script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/2acda4d0ce275753f5d97af81e7e13bf246472a5.html" id="instansive_2acda4d0ce" name="instansive_2acda4d0ce"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+<iframe src="http://widget.websta.me/in/freispeech/?r=1&w=3&h=3&b=0&bg=FFFFFF&p=0&sb=off" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:750px; height: 750px" ></iframe>
 
 As always, I'm late to jump on the <strike>fail</strike>boat, and this time I've decided to do some serious maintenance on my computer. I've had enough of having to rely on System Restore and worrying that I've lost all of my data, or that my computer is on the brink of death. So, I'm going to start maintaining my system more, and that's  starting with keeping my hard drive as tidy and speedy as possible.
 
